@@ -1,0 +1,105 @@
+<script src="js/tabellone_bootstrap.js"></script>
+<script>a.tab.init();</script>
+<div class="">
+<h2>Anagrafica Studenti</h2>
+
+<div id="accordion" role="tablist" class="" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title text-center">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Aggiungi un nuovo studente
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-body panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+	
+	<form id="addStudent">
+	  <div class="form-group col-md-6 col-sm-12">
+		<label for="exampleId1">Id</label>
+		<input type="text" class="form-control" id="exampleId1" name="id" placeholder="Iserire un ID">
+	  </div>
+	   <div class="form-group col-md-6 col-sm-12">
+		<label for="exampleName1">Nome</label>
+		<input type="text" class="form-control" id="exampleName1" name="name"  placeholder="Inserire un nome">
+	  </div>
+	   <div class="form-group col-md-6 col-sm-12">
+		<label for="exampleName1">Cognome</label>
+		<input type="text" class="form-control" id="exampleSurname1" name="surname"  placeholder="Inserire un cognome">
+	  </div>
+	  <div class="form-group col-md-6 col-sm-12">
+		<label for="exampleAge1">Livello</label>
+		<select class="form-control" id="exampleAge1" name="level">
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		</select>
+	  </div>
+	  <div class="col-md-6 col-sm-12">
+	  <fieldset class="form-group">
+		<legend>Sesso</legend>
+		<div class="form-check">
+		  <label class="form-check-label">
+			<input type="radio" class="form-check-input" name="sex" id="optionsSex1" value="male" checked>
+			Uomo
+		  </label>
+		</div>
+		<div class="form-check">
+		<label class="form-check-label">
+			<input type="radio" class="form-check-input" name="sex" id="optionsSex2" value="female">
+			Donna
+		  </label>
+		</div>
+	  </fieldset>
+	  </div>
+	  <div class="col-md-6 col-sm-12">
+		<fieldset class="form-group">
+		<legend>Chat</legend>
+		<div class="form-check">
+		  <label class="form-check-label">
+			<input type="radio" class="form-check-input" name="online" id="optionsOnline1" value="1" checked>
+			Online
+		  </label>
+		</div>
+		<div class="form-check">
+		<label class="form-check-label">
+			<input type="radio" class="form-check-input" name="online" id="optionsOnline2" value="0">
+			Offline
+		  </label>
+		</div>
+	  </fieldset>
+	  </div>
+	  
+	  <div class="form-group col-md-6 col-sm-12">
+		<label for="exampleId1">Nato il</label>
+		<input type="text" class="form-control datepicker"  data-date-format="dd/mm/yy" data-language="it" name="born" placeholder="Data di nascita"/>
+	  </div>
+	  <!-- dichiaro la parte di JS -->
+	  <script>
+		$.fn.datepicker.dates['en'] = {
+			days: ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"],
+			daysShort: ["Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"],
+			daysMin: ["Do", "Lu", "Ma", "Me", "Gi", "Ve", "Sa", "Do"],
+			months: ['Gennaio','Febbraio','Marzo', 'Aprile', 'Maggio','Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
+			monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			today: "Oggi"
+		};
+	  
+		$(function () {
+			$('.datepicker').datepicker();
+		});
+	  </script>
+	  
+	  <div class="col-sm-12 text-center">
+	  <button type="submit" class="btn btn-primary">Aggiungi</button>
+	  </div>
+	</form>
+</div>
+</div>
+
+<hr/>
+
+<table id="tabellone"></table>
+</div>
