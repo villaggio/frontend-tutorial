@@ -1,0 +1,25 @@
+<h2>Read the console</h2>
+<script>
+var arr = new Array(5);
+var obj = {};
+
+var per = 2;
+
+for (i=0 ; i < arr.length; i++){
+	arr.push( i * per );
+}
+console.log(arr);
+
+for (i=0 ; i < arr.length; i++){
+	obj[ arr[i] ] = i;
+}
+console.log(obj);
+
+var arr2 = [];
+
+for (var key in obj){
+	arr2[obj[key]] = key + "_";
+}
+
+console.log(arr2);
+</script>

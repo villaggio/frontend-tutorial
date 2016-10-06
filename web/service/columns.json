@@ -1,0 +1,32 @@
+[
+	{"id":"nome",
+	"name":"Nome",
+	"type":"string",
+	"position":1,
+	"bind":2
+	},
+	{"id":"cognome",
+	"name":"Cognome",
+	"type":"string",
+	"position":2,
+	"bind":3
+	},
+	{"id":"online",
+	"name":"Online",
+	"type":"boolean",
+	"position":5,
+	"bind":4
+	},
+	{"id":"sesso",
+	"name":"Sesso",
+	"type":"string",
+	"position":4,
+	"bind":5
+	},
+	{"id":"eta",
+	"name":"Età",
+	"type":"integer",
+	"position":3,
+	"bind":6
+	}
+]

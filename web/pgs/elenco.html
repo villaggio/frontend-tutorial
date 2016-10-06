@@ -1,0 +1,43 @@
+<h2>
+	Test.
+</h2>
+<ol id="articles" class=""></ol>
+<script>
+var drawList=function(data){
+	//utilizzo i dati forniti con l'array data per compilare l'elenco dei post.
+	for (var i=0;i<data.length;i++){
+		$('<li>').text(data[i].title).appendTo($('#articles'))
+	}
+}
+var pr=function(){
+	//scopo: riportare i titoli dei primi 100 post. 
+	//recupera l'elenco dei post
+	$.ajax({url:a.s+'posts'}).then(drawList) // una volta caricati i post, richiamo la funzione drawList, passando implicitamnte come argomento i dati ricevuti
+}
+$(pr) //il nostro script dovrà entrare in azione solo a caricamento della pagina avvenuta. Per garantirci che sia così, utilizziamo il notro costrutto $(document).ready()
+</script>
+
+<!--
+<script>
+	var pr=function(){
+		//recupera l'elenco dei post dal server, e lo processa. 
+		$.ajax({url: a.s + 'posts'}).then(
+			function(data) {
+				for (var i=0;i<data.length;i++){
+					var a=$('<a>').attr('href','#/post/'+data[i].id).text(data[i].title)
+					$('<li>').append(a).appendTo($('#postlist'))
+					
+				}
+			/*
+			  data.map(function(d){
+				var a=$('<a>').attr('href','#/post/'+d.id).text(d.title)
+				$('<li>').append(a).appendTo($('#postlist'))
+				//$('<li>').text(d.title).appendTo($('#postlist'))
+			  })
+			 */
+			}
+		)
+	}
+	$(pr)
+</script>
+-->
