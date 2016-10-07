@@ -20,6 +20,7 @@ a.tab.init = function (){
 	data.rows = [{
 		id:1,name: "Napoleone",
 		surname: "Bonaparte",
+		address: "Ajaccio",
 		level: 3,
 		sex: "male",
 		online: "offline",
@@ -36,6 +37,9 @@ a.tab.init = function (){
                 field: 'surname',
                 title: 'Cognome'
             }, {
+                field: 'address',
+                title: 'Indirizzo'
+            },{
                 field: 'level',
                 title: 'Livello'
             }, {
@@ -59,7 +63,12 @@ a.tab.init = function (){
             mobileResponsive: true,
             columns: data.columns
         });
-		
+	
+	$('#tabellone').on('dblclick', 'tr', function() {
+		$(this).remove()
+	});
+
+	
 	$("#addStudent").submit(function(e){
 		e.preventDefault(); // prevent form submit from HTML
 		data.addStudent($table);		
