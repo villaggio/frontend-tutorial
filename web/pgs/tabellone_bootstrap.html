@@ -74,9 +74,9 @@
 	  
 	  <div class="form-group col-md-6 col-sm-12">
 		<label for="exampleId1">Nato il</label>
-		<input type="text" class="form-control datepicker"  data-date-format="dd/mm/yy" data-language="it" name="born" placeholder="Data di nascita"/>
+		<input type="date" class="form-control datepicker"  data-date-format="dd/mm/yy" data-language="it" name="born" placeholder="Data di nascita"/>
 	  </div>
-	  <!-- dichiaro la parte di JS -->
+	  <!-- dichiaro la parte di JS 
 	  <script>
 		$.fn.datepicker.dates['en'] = {
 			days: ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"],
@@ -90,7 +90,14 @@
 		$(function () {
 			$('.datepicker').datepicker();
 		});
-	  </script>
+	  </script>-->
+	  
+	  <div class="form-group col-md-6 col-sm-12">
+		<label for="exampleAddress1">Indirizzo</label>
+		<input type="text" class="form-control" id="exampleAddress1" name="address"  placeholder="Inserire un indirizzo">
+	  </div>
+	  
+	  
 	  
 	  <div class="col-sm-12 text-center">
 	  <button type="submit" class="btn btn-primary">Aggiungi</button>
