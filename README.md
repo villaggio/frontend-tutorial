@@ -40,7 +40,7 @@ findColumn(data, "Nome").position += 5
 ad esempio sposterà una colonna
 * [Tabellone v1.2] - Creare la funzione **findRow(...)** seguendo lo stesso principio applicato per **findColumn(...)** in modo da poter manipolare un elemento della tabella con il seguente comando:
 ```javascript
-findColumn(data, "nome", "Mario").sesso = "female"
+setInfo(data, findRow(data, "nome", "Mario"), "sesso", value)
 ```
 * [Tabellone v2.1] - Provare ad aggiungere una nuova colonna a piacere in modo che anche il form sia in grado di valorizzarla (*ad esempio: Indirizzo*)
 * [Tabellone v2.2] - Estendere il tabellone aggiungendo la possibilità di cancellare delle righe facendo doppio click su una riga.
